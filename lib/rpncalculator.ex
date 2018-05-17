@@ -1,4 +1,4 @@
-defmodule RpnCalculator do
+ defmodule RpnCalculator do
   def split(stack, 0), do: { [], stack }
 
   def split(stack, n) do
@@ -13,15 +13,15 @@ defmodule RpnCalculator do
 
   def evaluate_token(token, stack) do
     op = case token do
-	   "+" -> &:erlang.+/2
-	   "-" -> &:erlang.-/2
-	   "*" -> &:erlang.*/2
-	   "/" -> &:erlang.//2
-	   _ -> fn ->
-		 {f, ""} = Float.parse(token)
-		 f
-	       end
-	 end
+           "+" -> &:erlang.+/2
+           "-" -> &:erlang.-/2
+           "*" -> &:erlang.*/2
+           "/" -> &:erlang.//2
+           _ -> fn ->
+                 {f, ""} = Float.parse(token)
+                 f
+               end
+         end
     do_operation stack, :erlang.fun_info(op)[:arity], do: op
   end
 
