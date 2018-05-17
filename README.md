@@ -1,21 +1,10 @@
-# PP
+# programming-praxis-elixir
 
-**TODO: Add description**
+My attempt at solving [programming praxis](https://programmingpraxis.com) using Elixir.
 
-## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `programming_praxis_elixir` to your list of dependencies in `mix.exs`:
+## Running
 
-```elixir
-def deps do
-  [
-    {:programming_praxis_elixir, "~> 0.1.0"}
-  ]
-end
-```
+To run tests for the problems:
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/programming_praxis_elixir](https://hexdocs.pm/programming_praxis_elixir).
-
+	mix test
