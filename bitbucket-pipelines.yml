@@ -1,0 +1,7 @@
+image: elixir
+
+pipelines:
+  default:
+    - step:
+        script:
+          - mix test
